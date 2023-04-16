@@ -28,3 +28,15 @@ locals {
   private_key = nonsensitive(jsondecode(aws_secretsmanager_secret_version.secrets.secret_string))["private_key"]
   public_key  = nonsensitive(jsondecode(aws_secretsmanager_secret_version.secrets.secret_string))["public_key"]
 }
+
+### RDS SecretsManager
+
+data "aws_secretsmanager_secret" "env_secrets" {
+  name = "RdsAdminCred"
+  depends_on = [
+    aws_secretsmanager_secret.RdsAdminCred
+  ]
+}
+  data "aws_secretsmanager_secret_version" "current_secrets" {
+  secret_id = data.aws_secretsmanager_secret.env_secrets.id
+}
