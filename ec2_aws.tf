@@ -77,50 +77,21 @@ resource "null_resource" "get_instance_ip" {
   }
 }
 
-# echo "Node.js app started with process ID $!"
-# echo "<html><body><div>Public $(hostname -f)</div></body></html>" > app.js
-# sudo nohup node /home/ec2-user/app.js > app.log 2>&1 &
-
-
-#!/bin/bash
-
-# Install Node.js and npm
-# curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-# sudo yum install -y nodejs npm
-# sudo yum install -y coreutils
-
-# mkdir myapp
-# cd myapp
-# npm init -y
-# npm install express --save
-
-# echo "const express = require('express');
-# const app = express();
-# const port = 3000;
-
-# app.get('/', (req, res) => {
-#   res.send('Hello, world!');
-# });
-
-# app.listen(port, () => {
-#   console.log('Server listening on port ' + port);
-# });" > index.js
-
 
 ############################################
-# curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
-#               sudo yum update -y
-#               sudo yum install -y nodejs npm coreutils
-#               sudo systemctl enable nodejs
-#               sudo systemctl start nodejs
-#               sudo mkdir /home/ec2-user/node-app
-#               sudo cd /home/ec2-user/node-app
-#               sudo npm init -y
-#               sudo npm install express --save
-#               echo "const express = require('express');
-#               const app = express();
-#               const port = 3000;
-#               app.get('/', (req, res) => {res.send('\n \n Hello Eng Fahd this is Your First DevOps Project\n \n'); });
-#               app.listen(port, () => {console.log('Server Listening on port ' + port); });" > /home/ec2-user/app.js
+#         curl -sL https://rpm.nodesource.com/setup_14.x | sudo bash -
+#         sudo yum update -y
+#         sudo yum install -y nodejs npm coreutils
+#         sudo systemctl enable nodejs
+#         sudo systemctl start nodejs
+#         sudo mkdir /home/ec2-user/node-app
+#         sudo cd /home/ec2-user/node-app
+#         sudo npm init -y
+#         sudo npm install express --save
+#         echo "const express = require('express');
+#         const app = express();
+#         const port = 3000;
+#         app.get('/', (req, res) => {res.send('\n \n Hello From Node App \n \n'); });
+#         app.listen(port, () => {console.log('Server Listening on port ' + port); });" > /home/ec2-user/app.js
 
 
